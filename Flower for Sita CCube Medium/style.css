@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&family=Public+Sans:wght@900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    background-color: #fefae0;
+}
+
+.header {
+    box-shadow: 5px 0px 5px #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+}
