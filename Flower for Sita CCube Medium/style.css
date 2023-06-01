@@ -160,6 +160,8 @@ h1 {
 
 .gallery {
     margin: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .box {
@@ -189,4 +191,11 @@ h1 {
     color: #283618;
     border-radius: 50%;
     cursor: pointer;
+    transition: all 0.3s;
 }
+
+.box-btn:hover {
+    background-color: #283618;
+    box-shadow: 0 0 0 5px hsla(88, 38%, 15%, 0.526);
+    color: #fff;
+  }
