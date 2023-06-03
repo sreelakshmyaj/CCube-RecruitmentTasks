@@ -1,9 +1,19 @@
-const buttons = document.querySelectorAll(".box-btn");
-const popups = document.querySelectorAll(".popups");
-console.log(popups);
+// const buttons = document.querySelectorAll(".box-btn");
 
-buttons.forEach((btn) => {
-    btn.addEventListener("click", function(e){
-            console.log(e.target);
-        })
-})
+// buttons.forEach((btn) => {
+//     btn.addEventListener("click", function(e){
+//             var x 
+//         })
+// })
+
+function show(id) {
+    var popup = document.getElementById(id);
+    console.log(popup);
+    popup.style.display = 'flex';
+}
+
+function hide(id) {
+    var popup = document.getElementById(id);
+    console.log(popup);
+    popup.style.display = 'none';
+}

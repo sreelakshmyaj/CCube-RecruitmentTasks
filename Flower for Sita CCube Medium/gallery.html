@@ -16,6 +16,7 @@
         <div class="nav-elements">
             <ul>
                 <li><a href="index.html">home</a></li>
+                <li><a href="gallery.html" class="current">gallery</a></li>
                 <li><a href="#">snap</a></li>
             </ul>
         </div>
@@ -32,7 +33,7 @@
                 <i>Dahlia pinnata</i>
                 <p>A sybmol of commitment and everlasting union</p>
             </div>
-            <button class="box-btn popup1"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="box-btn" onclick="show('popup1')"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
         <div class="box">
@@ -71,14 +72,17 @@
             <button class="box-btn"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </section>
-    <section class="popups">
-        <div class="container popup1">
-            <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
-            <h2>Dahlia</h2>
-                
-            <p>Dahlias are tuberous, herbaceous perennials native to Mexico and Central America. They are members of the Asteraceae family, which also includes sunflowers, daisies, and chrysanthemums. Dahlias come in a wide variety of colors, shapes, and sizes. Some dahlias have single flowers, while others have double or even triple flowers. The flowers can be as small as a few inches in diameter or as large as 12 inches across. Dahlias can grow to be as tall as 6 feet, but there are also dwarf varieties that only grow to be a few inches tall.</p>
-            <p>Dahlias are popular cut flowers and are often used in arrangements and bouquets. They can also be used to make dried flowers. Dahlias are a beautiful addition to any garden and can be enjoyed for many years.</p>
+    <section>
+        <div class="popups" id="popup1">
+            <div class="container">
+                <button class="close-btn" onclick="hide('popup1')"><i class="fa-solid fa-xmark"></i></button>
+                <h2>Dahlia</h2>
+                    
+                <p>Dahlias are tuberous, herbaceous perennials native to Mexico and Central America. They are members of the Asteraceae family, which also includes sunflowers, daisies, and chrysanthemums. Dahlias come in a wide variety of colors, shapes, and sizes. Some dahlias have single flowers, while others have double or even triple flowers. The flowers can be as small as a few inches in diameter or as large as 12 inches across. Dahlias can grow to be as tall as 6 feet, but there are also dwarf varieties that only grow to be a few inches tall.</p>
+                <p>Dahlias are popular cut flowers and are often used in arrangements and bouquets. They can also be used to make dried flowers. Dahlias are a beautiful addition to any garden and can be enjoyed for many years.</p>
+            </div>
         </div>
+        
     </section>
     <script src="app.js"></script>
 </body>

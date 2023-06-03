@@ -44,7 +44,8 @@ h1 {
     transition: all 0.3s ease-in-out;
 }
 
-.header ul li a:hover {
+.header ul li a:hover,
+.header ul li a.current {
     background-color: #014d1e;
     color: #f0efe4;
     border-radius: 50px;
