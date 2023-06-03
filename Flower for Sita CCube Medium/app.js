@@ -8,12 +8,11 @@
 
 function show(id) {
     var popup = document.getElementById(id);
-    console.log(popup);
     popup.style.display = 'flex';
 }
 
 function hide(id) {
     var popup = document.getElementById(id);
-    console.log(popup);
     popup.style.display = 'none';
+    
 }
