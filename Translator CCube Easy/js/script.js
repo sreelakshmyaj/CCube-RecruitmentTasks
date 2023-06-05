@@ -14,20 +14,43 @@ translateBtn.addEventListener("click", () => {
     toText.setAttribute("placeholder", "Translating...");
     
     // Todo: add api fetch from https://mymemory.translated.net/doc/spec.php
-
-
+    fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${translateFrom}|${translateTo}`)
+    .then(response => {
+        return response.json();
+    }) 
+    .then(data => {
+        const translatedText = data.responseData.translatedText;
+        toText.value = translatedText;
+        toText.removeAttribute("placeholder");
+    })
 });
 
 icons.forEach(icon => {
     icon.addEventListener("click", ({target}) => {
         if(!fromText.value || !toText.value) return;
         // TODO: add code to copy to Clipboard for the icon with class fa-copy
-        if(target.classList.contains('fa-copy')) {
-            fromText.select();
-            navigator.clipboard.writeText(fromText.value);
+        if(target.classList.contains('fa-copy')){
+            if(target.id == "from"){
+                navigator.clipboard.writeText(fromText.value);
+            }
+            else {
+                navigator.clipboard.writeText(toText.value);
+            }
+            
         }
 
         // TODO: add code for speechSynthesis for icon with classname fa-volume-up (text to speech)
+        else {
+            let voice;
+            if(target.id == "from") {
+                voice = new SpeechSynthesisUtterance(fromText.value);
+                voice.lang = selectTag[0].value;
+            } else {
+                voice = new SpeechSynthesisUtterance(toText.value);
+                voice.lang = selectTag[1].value;
+            }
+            speechSynthesis.speak(voice);
+        }
 
     });
 });
