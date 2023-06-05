@@ -164,7 +164,7 @@ h1 {
     margin: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 2rem;
 }
 
